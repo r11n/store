@@ -15,12 +15,18 @@
 </div>
 <div id="columns">
 <div id="side">
+
 <ul>
 <li><%= link_to 'Home',  store_index_path %></li>
 <li><%= link_to 'Questions',  store_index_path %></li>
 <li><%= link_to 'News',  store_index_path %></li>
 <li><%= link_to 'Contact',  store_index_path %></li>
 </ul>
+<div id="cart">
+  <% if @cart %>
+  <%= render @cart %>
+  <% end %>
+</div>
 </div>
 <div id="main">
     <%= yield %>
